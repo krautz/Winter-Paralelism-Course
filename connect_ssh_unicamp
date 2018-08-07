@@ -1,0 +1,18 @@
+ssh unicamp
+ssh ra165457@ssh.students.ic.unicamp.br or ssh ra165457@ssh2.students.ic.unicamp.br
+(A senha eh a mesma para acessar no S.O Linux nos laboratorios do IC).
+ssh parsusy
+
+compile: nvcc src.cu -o src.x
+exec: ./src.x 
+
+para transferir arquivos:
+host -> remote:
+sftp ra165457@ssh.students.ic.unicamp.br
+put localFile remoteFile
+
+remote -> host:
+sftp ra165457@ssh.students.ic.unicamp.br
+get remoteFile localFile
+
+
