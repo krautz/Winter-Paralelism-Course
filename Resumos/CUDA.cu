@@ -76,6 +76,22 @@
  *
  * Control divergence:
  * se um mesmo wrap executa um bloco com if's entao ha perda de eficiencia pois cada thread pode executar o bloco if ou o bloco else, introduzindo "nop's" ao que ele nao executar, aumentando assim o tempo de execução do programa.
+ *
+ *
+ * Problema da Corida:
+ * CUDA soluciona o problema da corrida com funções que fazem operações atomicas, como:
+ * atomicAdd (int* adress, int value);
+ *
+ *
+ * Observaçoes:
+ * em questado de threadIdx.x/y/z
+ * eixo horizontal eh o x (colunas)
+ * eixo vertical eh o y (linhas)
+ * profundidade eh o eixo z
+ *
+ * Tiling -> dividir o dado em blocos que cabe dentro de um bloco e utiliza-lo na shared memory
+ *
+ * Coalescing e Shared Memory são o segredo para se programar bem em CUDA
  */
 
  #include <stdio.h>
